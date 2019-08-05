@@ -11,9 +11,23 @@
     Owner: <%=horse.owner%> <br/>
     <img src="<%=horse.image%>"/> <br/>
     Age: <%=horse.age%> <br/>
+    Sex: <%=horse.sex%> <br/>
     Breed: <%=horse.breed%> <br/> 
-    Turn Out: <%=horse.turnOut%> <br/>
-
+    AM Feed: <br/> 
+    Hay: <%=horse.morningFeed.hay%> <br/> 
+    Feed: <%=horse.morningFeed.feed%> <br/> 
+    Supplements: <%=horse.morningFeed.supplements%> <br/> 
+    PM Feed: <br/> 
+    Hay: <%=horse.eveningFeed.hay%> <br/> 
+    Feed: <%=horse.eveningFeed.feed%> <br/>  
+    Supplements: <%=horse.eveningFeed.supplements%> <br/> 
+    Special Instructions: <%=horse.specialInstructions%> <br/> 
+    Turn Out:  <% if(horse.turnOut === true) { %>
+        TURN OUT
+        <% } else { %>
+        KEEP IN
+        <% } %>
+    <br/> 
     <a href="/horses/<%=horse.id; %>/edit">Edit</a>
     <a href="/horses">Back to Barn</a>
 
