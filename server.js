@@ -65,7 +65,6 @@ app.get('/horses/new', (req, res) => {
 });
 // create new route
 app.post('/horses', (req, res) => {
-  
   Horse.create(req.body, (err, createdHorse) => {
     res.redirect('/horses');
   });
@@ -91,10 +90,15 @@ app.get('/horses/:id/edit', (req, res) => {
 });
 // update
 app.put('/horses/:id', (req, res) => {
+  if(req.body.turnOut === 'on') {
+    req.body.turnOut = true;
+} else {
+    req.body.turnOut = false;
+}
   Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
     res.redirect('/horses')
-  })
-})
+  });
+});
 // delete
 app.delete('/horses/:id', (req, res) => {
   Horse.findByIdAndRemove(req.params.id, (err, deletedHorse) => {
