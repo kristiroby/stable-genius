@@ -89,11 +89,18 @@ app.get('/horses/:id/edit', (req, res) => {
     );
   }); 
 });
+// update
 app.put('/horses/:id', (req, res) => {
   Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
     res.redirect('/horses')
   })
 })
+// delete
+app.delete('/horses/:id', (req, res) => {
+  Horse.findByIdAndRemove(req.params.id, (err, deletedHorse) => {
+    res.redirect('/horses');
+  });
+});
 //___________________
 //Listener
 //___________________
