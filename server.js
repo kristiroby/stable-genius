@@ -52,6 +52,10 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //localhost:3000
+app.get('/', (req, res) => {
+  res.redirect('/horses')
+});
+
 app.get('/horses', (req, res) => {
   Horse.find({}, (err, allHorses) => {
   res.render('index.ejs', {
