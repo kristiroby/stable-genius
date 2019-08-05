@@ -14,14 +14,10 @@
         <a href="/horses/<%=horses[i].id;%>">
         <%=horses[i].name%>
         </a> <br/>
-        <%=horses[i].owner%> <br/> 
-        <%=horses[i].image%> <br/>
-        <% if (horses[i].turnOut === true) { %>
-            Turn Out
-        <% } else { %>
-            Keep In
-        <% } %> 
-        <%=horses[i].turnOut%> <br/>
+        Owner: <%=horses[i].owner%> <br/> 
+        <img src="<%=horses[i].image%>" /> 
+        <br/>
+        Turn out: <%=horses[i].turnOut%> <br/>        
         <% } %>
     </li>
     </ul>
