@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Horse</h1>
+    <form class = editHorseForm action="/horses/<%=horse.id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=horse.name%>" /> <br/>
+        Owner: <input type="text" name="owner" value="<%=horse.owner%>"/> <br/>
+        Image: <input type="text" name="image" value="<%=horse.image%>"/> <br/>
+        Age: <input type="text" name="age" value="<%=horse.age%>"/> <br/>
+        Breed: <input type="text" name="breed" value="<%=horse.breed%>"/> <br/>
+        Turn Out: <input type="checkbox" name="turnOut"/> <br/>
+        <input type="submit" value="Update Horse" /> <br/>
+        </form>
+</body>
+</html>

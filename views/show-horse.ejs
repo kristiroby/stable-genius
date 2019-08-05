@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Horse</title>
+</head>
+<body>
+    <h1><%=horse.name%></h1>
+    Owner: <%=horse.owner%> <br/>
+    <%=horse.image%> <br/>
+    Age: <%=horse.age%> <br/>
+    Breed: <%=horse.breed%> <br/> 
+    Turn Out: <%=horse.turnOut%> <br/>
+
+    <a href="/horses/<%=horse.id; %>/edit">Edit</a>
+    <a href="/horses">Back to Barn</a>
+</body>
+</html>

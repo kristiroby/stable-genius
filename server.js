@@ -70,6 +70,30 @@ app.post('/horses', (req, res) => {
     res.redirect('/horses');
   });
 });
+// show route
+app.get('/horses/:id', (req, res) => {
+  Horse.findById(req.params.id, (err, foundHorse) => {
+    res.render('show-horse.ejs', {
+      horse:foundHorse
+    });
+  });
+});
+// edit route
+app.get('/horses/:id/edit', (req, res) => {
+  Horse.findById(req.params.id, (err, foundHorse) => {
+   res.render(
+    'edit-horse.ejs',
+    {
+      horse:foundHorse
+    }
+    );
+  }); 
+});
+app.put('/horses/:id', (req, res) => {
+  Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
+    res.redirect('/horses')
+  })
+})
 //___________________
 //Listener
 //___________________

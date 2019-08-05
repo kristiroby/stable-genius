@@ -2,8 +2,11 @@ const mongoose = require('mongoose');
 
 const horseSchema = new mongoose.Schema({
     name: String,
+    owner: String,
+    image: String,
     age: String,
-    owner: String
+    breed: String,
+    turnOut: Boolean
 });
 
 const Horse = mongoose.model('Horse', horseSchema);
