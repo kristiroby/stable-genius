@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Horses</h1>
+    <% for (let i = 0; i < horses.length; i++) { %>
+        <%=horses[i].name%>
+        <%=horses[i].image%>
+
+        <% if (horses[i].turnOut === true) { %>
+            Turn Out
+        <% } else { %>
+            Keep In
+        <% } %>
+        <% } %>
+    
+    <a href="/horses/new">Add Horse</a>
+</body>
+</html>

@@ -4,9 +4,10 @@ console.log(process.env.MONGODB_URI)
 //Dependencies
 //___________________
 const express = require('express');
+const app = express();
 const methodOverride  = require('method-override');
-const mongoose = require ('mongoose');
-const app = express ();
+const mongoose = require('mongoose');
+const Horse = require('./models/horseSchema.js')
 const db = mongoose.connection;
 //___________________
 //Port
@@ -26,7 +27,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true});
+mongoose.connect(MONGODB_URI ,  {useNewUrlParser: true});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -47,16 +48,34 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
-
 //___________________
 // Routes
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
-  res.send('Hello World!');
+app.get('/horses', (req, res) => {
+  Horse.find({}, (err, allHorses) => {
+  res.render('index.ejs', {
+    horses:allHorses
+  });
 });
-
+});
+// render new
+app.get('/horses/new', (req, res) => {
+  res.render('new.ejs')
+});
+// create new route
+app.post('/horses', (req, res) => {
+  
+  Horse.create(req.body, (err, createdHorse) => {
+    res.redirect('/horses');
+  });
+});
 //___________________
 //Listener
 //___________________
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+
+mongoose.connect('mongodb://localhost:27017/horses', { useNewUrlParser: true});
+mongoose.connection.once('open', () => {
+    console.log('connected to mongo');
+});
