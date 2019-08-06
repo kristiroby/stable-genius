@@ -9,6 +9,13 @@ router.get('/seed', (req, res) => {
         res.redirect('/horses')
     })
 })
+router.get('/feed', (req, res) => {
+  Horse.find({}, (err, allHorses) => {
+    res.render('show-feed.ejs', {
+    horses:allHorses
+    }); 
+  });
+});
 //localhost:3000
 router.get('/', (req, res) => {
     Horse.find({}, (err, allHorses) => {

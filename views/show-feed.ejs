@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feed</title>
+</head>
+<body>
+    <h1>Feeding Schedule</h1>
+    <table>
+        Morning 
+        <tr>
+            <td>Name</td>
+            <td>Hay </td>
+            <td>Feed </td>
+            <td>Supplements</td> 
+        </tr>
+        <% for (let i = 0; i < horses.length; i++) { %>
+        <tr>
+            <td><%=horses[i].name%> </td>
+            <td><%=horses[i].morningFeed.hay%></td>
+            <td><%=horses[i].morningFeed.feed%> </td>
+            <td><%=horses[i].morningFeed.supplements%> </td>
+        </tr>
+        <%}%>
+    </table>
+    <table>
+        Evening
+        <tr>
+            <td>Name</td>
+            <td>Hay </td>
+            <td>Feed </td>
+            <td>Supplements</td> 
+        </tr>
+        <% for (let i = 0; i < horses.length; i++) { %>
+        <tr>
+            <td><%=horses[i].name%> </td>
+            <td><%=horses[i].eveningFeed.hay%></td>
+            <td><%=horses[i].eveningFeed.feed%> </td>
+            <td><%=horses[i].eveningFeed.supplements%> </td>
+        </tr>
+        <%}%>
+    </table>
+    <a href="/horses">Back to Barn</a>
+</body>
+</html>
