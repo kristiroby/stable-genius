@@ -23,9 +23,9 @@
     Supplements: <%=horse.eveningFeed.supplements%> <br/> 
     Special Instructions: <%=horse.specialInstructions%> <br/> 
     Turn Out:  <% if(horse.turnOut === true) { %>
-        TURN OUT
+        Yes
         <% } else { %>
-        KEEP IN
+        No
         <% } %>
     <br/> 
     <a href="/horses/<%=horse.id; %>/edit">Edit</a>
