@@ -1,14 +1,42 @@
 body {
     font-family: 'Work Sans', sans-serif;
 }
-.container {
-    position: relative;
-    width: 400px;
-    height: 400px;
+header {
+    text-align: center; 
+} 
+h2 {
+    margin: -.5em 0;
+}
+h3 {
+    margin: -.5em 0;
+}
+.horseIndex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.showMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.showElement {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 5em;
+}
+.showActions {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
 }
 img {
+    max-height: 400px;
     max-width: 400px;
-    height: auto;
 }
 table {
     border-collapse: collapse;
@@ -16,7 +44,6 @@ table {
     margin: 1em;
 }
 th {
-    background-color: #dddddd;
     border: 2px solid black;
     padding: 5px;
 }
@@ -30,8 +57,13 @@ tr:nth-child(even) {
 a {
     color: black;
     margin: 1em;
+    text-decoration: none;
+}
+a :hover {
+    cursor: pointer;
 }
 li {
     list-style-type: none;
+    margin-left: 2em;
 }
 

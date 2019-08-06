@@ -56,16 +56,16 @@ router.post('/', (req, res) => {
     });
 });
   // update
-  router.put('/:id', (req, res) => {
-    if(req.body.turnOut === 'on') {
-        req.body.turnOut = true;
-    } else {
-        req.body.turnOut = false;
-    }
-    Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
-      res.redirect(`/horses/${req.params.id}`)
-    });
+router.put('/:id', (req, res) => {
+  if(req.body.turnOut === 'on') {
+    req.body.turnOut = true;
+  } else {
+    req.body.turnOut = false;
+  }
+  Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
+    res.redirect(`/horses/${req.params.id}`)
   });
+});
 // show route
 router.get('/:id', (req, res) => {
   Horse.findById(req.params.id, (err, foundHorse) => {

@@ -8,34 +8,61 @@
     <header>
         <% include ./partials/header.ejs %>
     </header>
-    <div class="container">
+    
+        <div class="showMain">
         <h1><%=horse.name%></h1>
-        Owner: <%=horse.owner%> <br />
         <img src="<%=horse.image%>"/> <br />
-        Age: <%=horse.age%> <br />
-        Sex: <%=horse.sex%> <br />
-        Breed: <%=horse.breed%> <br />
-        AM Feed: <br />
-        Hay: <%=horse.morningFeed.hay%> <br />
-        Feed: <%=horse.morningFeed.feed%> <br />
-        Supplements: <%=horse.morningFeed.supplements%> <br />
-        PM Feed: <br />
-        Hay: <%=horse.eveningFeed.hay%> <br />
-        Feed: <%=horse.eveningFeed.feed%> <br />
-        Supplements: <%=horse.eveningFeed.supplements%> <br />
-        Special Instructions: <%=horse.specialInstructions%> <br />
-        Turn Out: <% if(horse.turnOut === true) { %>
+        <div class="showActions">
+        <a href="/horses/<%=horse.id; %>/edit"><button>EDIT</button></a>
+        <form action="/horses/<%=horse.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" />
+        </form>
+        </div>
+        </div>
+        <div class="showElement">
+        <ul>
+        <li>Owner: <%=horse.owner%> </li><br />
+        <li>Age: <%=horse.age%></li> <br />
+        <li>Sex: <%=horse.sex%> </li><br />
+        <li>Breed: <%=horse.breed%></li> <br />
+        <li>Special Instructions: <%=horse.specialInstructions%></li> <br />
+        <li>Turn Out: <% if(horse.turnOut === true) { %>
             Yes
             <% } else { %>
                 No
             <% } %>
-        <br />
-        <a href="/horses/<%=horse.id; %>/edit">Edit</a>
-
-        <form action="/horses/<%=horse.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
-        </form>
+        </li>
+        </ul>
+        <table>
+            <tr>
+                <th>Morning Feed </th>
+            </tr>
+            <tr>
+                <th>Hay</th>
+                <th>Feed</th> 
+                <th>Supplements</th>
+            </tr>
+            <tr>
+                <td><%=horse.morningFeed.hay%> </td>
+                <td><%=horse.morningFeed.feed%> </td>
+                <td><%=horse.morningFeed.supplements%> </td>
+            </tr>
+            <tr>
+                <th>Evening Feed </th>
+            </tr>
+            <tr>
+                <th>Hay</th>
+                <th>Feed</th> 
+                <th>Supplements</th>
+            </tr>
+            <tr>
+                <td><%=horse.eveningFeed.hay%> </td>
+                <td><%=horse.eveningFeed.feed%> </td>
+                <td><%=horse.eveningFeed.supplements%> </td>
+            </tr>
+    </table>
     </div>
+    
 </body>
 
 </html>

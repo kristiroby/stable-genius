@@ -7,8 +7,9 @@
     <header>
         <% include ./partials/header.ejs %>
     </header>
-    <div class="container">
+    <div class="indexContainer">
     <ul>
+    <div class="horseIndex">
     <% for (let i = 0; i < horses.length; i++) { %>
         <li>
         <a href="/horses/<%=horses[i].id;%>">
@@ -20,7 +21,8 @@
         <br/>
     </li>
     <%}%>
-    </ul>
     </div>
+    </ul>
+</div>
 </body>
 </html>
