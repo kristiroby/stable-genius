@@ -4,12 +4,16 @@
     <% include ./partials/head.ejs %>
 </head>
 <body>
+    <header>
+        <% include ./partials/header.ejs %>
+    </header>
     <h1>Edit Horse</h1>
     <form class = editHorseForm action="/horses/<%=horse.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=horse.name%>" /> <br/>
         Owner: <input type="text" name="owner" value="<%=horse.owner%>"/> <br/>
         Image: <input type="text" name="image" value="<%=horse.image%>"/> <br/>
         Age: <input type="text" name="age" value="<%=horse.age%>"/> <br/>
+        Sex: <input type="text" name="sex" value="<%=horse.sex%>"/> <br/>
         Breed: <input type="text" name="breed" value="<%=horse.breed%>"/> <br/>
         Turn Out: <input type="checkbox" name="turnOut"/> <br/>
         Morning Hay: <input type="text" name="morningFeed.hay" /> <br/>

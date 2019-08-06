@@ -4,11 +4,9 @@
     <% include ./partials/head.ejs %>
 </head>
 <body>
-    <h1>Horses</h1>
-    <nav>
-        <a href="/horses/feed">Go To Feed Schedule</a>
-        <a href="/horses/new">Add Horse</a>
-    </nav>
+    <header>
+        <% include ./partials/header.ejs %>
+    </header>
     <div class="container">
     <ul>
     <% for (let i = 0; i < horses.length; i++) { %>
@@ -17,7 +15,7 @@
         <h2><%=horses[i].name%></h2>
         </a> 
         <br/>
-        Owner: <%=horses[i].owner%> <br/> 
+        <h3>Owner: <%=horses[i].owner%></h3> <br/> 
         <img src="<%=horses[i].image%>" /> 
         <br/>
     </li>

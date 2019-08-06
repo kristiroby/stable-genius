@@ -4,6 +4,9 @@
     <% include ./partials/head.ejs %>
 </head>
 <body>
+    <header>
+        <% include ./partials/header.ejs %>
+    </header>
     <form action="/horses" method="POST">
     Name: <input type="text" name="name" /> <br/>
     Owner: <input type="text" name="owner" /> <br/>

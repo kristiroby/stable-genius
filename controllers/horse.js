@@ -55,24 +55,24 @@ router.post('/', (req, res) => {
       res.redirect('/horses');
     });
 });
-  // show route
+  // update
+  router.put('/:id', (req, res) => {
+    if(req.body.turnOut === 'on') {
+        req.body.turnOut = true;
+    } else {
+        req.body.turnOut = false;
+    }
+    Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
+      res.redirect(`/horses/${req.params.id}`)
+    });
+  });
+// show route
 router.get('/:id', (req, res) => {
   Horse.findById(req.params.id, (err, foundHorse) => {
     res.render('show-horse.ejs', {
       horse:foundHorse
     });
   });
-});
-  // update
-router.put('/:id', (req, res) => {
-  if(req.body.turnOut === 'on') {
-      req.body.turnOut = true;
-  } else {
-      req.body.turnOut = false;
-  }
-    Horse.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedHorse) => {
-      res.redirect('/horses')
-    });
 });
 
 module.exports = router;

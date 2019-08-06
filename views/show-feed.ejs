@@ -4,6 +4,9 @@
     <% include ./partials/head.ejs %>
 </head>
 <body>
+    <header>
+        <% include ./partials/header.ejs %>
+    </header>
     <h1>Feeding Schedule</h1>
     <table>
         <tr>
@@ -17,7 +20,9 @@
         </tr>
         <% for (let i = 0; i < horses.length; i++) { %>
         <tr>
-            <td><%=horses[i].name%> </td>
+            <td>
+            <a href="/horses/<%=horses[i].id;%>"><%=horses[i].name%></a> 
+            </td>
             <td><%=horses[i].morningFeed.hay%></td>
             <td><%=horses[i].morningFeed.feed%> </td>
             <td><%=horses[i].morningFeed.supplements%> </td>
@@ -43,6 +48,5 @@
         </tr>
         <%}%>
     </table>
-    <a href="/horses">Back to Barn</a>
 </body>
 </html>
