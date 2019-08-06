@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Feed</title>
+    <% include ./partials/head.ejs %>
 </head>
 <body>
     <h1>Feeding Schedule</h1>
     <table>
-        Morning 
         <tr>
-            <td>Name</td>
-            <td>Hay </td>
-            <td>Feed </td>
-            <td>Supplements</td> 
+            <th> Morning </th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Hay </th>
+            <th>Feed </th>
+            <th>Supplements</th> 
         </tr>
         <% for (let i = 0; i < horses.length; i++) { %>
         <tr>
@@ -26,12 +25,14 @@
         <%}%>
     </table>
     <table>
-        Evening
         <tr>
-            <td>Name</td>
-            <td>Hay </td>
-            <td>Feed </td>
-            <td>Supplements</td> 
+            <th> Evening </th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Hay </th>
+            <th>Feed </th>
+            <th>Supplements</th> 
         </tr>
         <% for (let i = 0; i < horses.length; i++) { %>
         <tr>
