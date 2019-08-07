@@ -11,5 +11,9 @@ It can also help barn owners and managers centralize information and communicate
 
 To-Do
 Log in page
+add barn name
 The forms need additional styling - hover, focus 
 Add page for owner information
+Populate feed page with new horse info
+Add calendar/appointment tracker
+weather?
