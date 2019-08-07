@@ -13,10 +13,9 @@
     <% for (let i = 0; i < horses.length; i++) { %>
         <li>
         <a href="/horses/<%=horses[i].id;%>">
-        <h2><%=horses[i].name%></h2>
+        <h2 class="name"><%=horses[i].name%></h2>
         </a> 
         <br/>
-        <h3>Owner: <%=horses[i].owner%></h3> <br/> 
         <img src="<%=horses[i].image%>" /> 
         <br/>
     </li>

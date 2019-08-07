@@ -1,20 +1,48 @@
 body {
+    background-color: #283044;
     font-family: 'Work Sans', sans-serif;
 }
 header {
     text-align: center; 
+    background-color: #E47F7B;
+    padding: 2em;
+    color: #EBE9E9;
+    border: 1px solid #EBE9E9;
 } 
+.title {
+    font-size: 45px;
+}
+a {
+    color: black;
+    margin: 1em;
+    text-decoration: none;
+    /* color: #EBE9E9; */
+}
+.nav {
+    color: #EBE9E9;
+}
+h1 {
+    color: #EBE9E9;
+    text-align: center;
+}
 h2 {
     margin: -.5em 0;
+    color: #EBE9E9;
 }
 h3 {
+    color: #EBE9E9;
     margin: -.5em 0;
 }
+.name {
+    color: #283044;
+}
 .horseIndex {
+    background-color: #EBE9E9;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 2em;
 }
 .showMain {
     display: flex;
@@ -37,27 +65,42 @@ h3 {
 img {
     max-height: 400px;
     max-width: 400px;
+    border-radius: 10%;
+}
+button {
+    background-color: #E47F7B;
+    color: #EBE9E9;
+    font-size: 16px;
+    padding: .5em;
+    border-radius: 10%;
+}
+input[type="submit"] {
+    background-color: #E47F7B;
+    color: #EBE9E9;
+    font-size: 16px;
+    padding: .5em;
+    border-radius: 10%;
+}
+.feedTitle {
+    padding: 1em;
+    text-align: center;
+    color: #EBE9E9;;
 }
 table {
     border-collapse: collapse;
     font-size: 20px;
-    margin: 1em;
+    margin: 2em;
+    color: #283044;
+    background-color: #EBE9E9;
 }
 th {
-    border: 2px solid black;
+    border: 2px solid #283044;;
     padding: 5px;
 }
 td {
-    border: 1px solid black;
+    border: 2px solid #283044;;
     padding: 5px;
-}
-tr:nth-child(even) {
-        background-color: #dddddd;
-}
-a {
-    color: black;
-    margin: 1em;
-    text-decoration: none;
+    color: #283044;
 }
 a :hover {
     cursor: pointer;
@@ -65,5 +108,28 @@ a :hover {
 li {
     list-style-type: none;
     margin-left: 2em;
+    padding: -1em;
+}
+ul {
+    background-color: #EBE9E9;;
+    padding: 1em;
+}
+input {
+    padding: .5em;
+    margin: .5em;
+}
+.editHorseForm {
+    background-color: #EBE9E9;
+    padding: 2em;
+}
+input {
+    border: 1px solid #283044;
+}
+input :hover {
+    border: 1px solid #E47F7B;
+}
+.addHorseForm {
+    background-color: #EBE9E9;
+    padding: 2em;
 }
 
