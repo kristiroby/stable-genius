@@ -12,7 +12,7 @@ const db = mongoose.connection;
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 //___________________
 //Database
 //___________________
@@ -49,7 +49,8 @@ const horseController = require('./controllers/horse.js');
 app.use('/horses', horseController)
 //___________________
 app.get('/', (req, res) => {
-  res.redirect('/horses')
+  // res.redirect('/horses')
+  res.send('HIIII')
 });
 //___________________
 //Listener
