@@ -49,7 +49,7 @@ const horseController = require('./controllers/horse.js');
 app.use('/horses', horseController)
 //___________________
 app.get('/', (req, res) => {
-  res.redirect('/horses')
+  res.send('HI')
 });
 //___________________
 //Listener
