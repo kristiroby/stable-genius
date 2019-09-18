@@ -25,7 +25,7 @@ router.get('/:id/edit', (req, res) => {
   }); 
 });
 //localhost:3000
-router.get('/horses', (req, res) => {
+router.get('/', (req, res) => {
   Horse.find({}, (err, allHorses) => {
     res.render('index.ejs', {
       horses:allHorses
