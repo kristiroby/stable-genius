@@ -12,7 +12,7 @@ const db = mongoose.connection;
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 //___________________
 //Database
 //___________________
@@ -25,7 +25,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  {useNewUrlParser: true});
+// mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -49,8 +49,7 @@ const horseController = require('./controllers/horse.js');
 app.use('/horses', horseController)
 //___________________
 app.get('/', (req, res) => {
-  // res.redirect('/horses')
-  res.send('HIIII')
+  res.redirect('/horses')
 });
 //___________________
 //Listener

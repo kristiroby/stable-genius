@@ -1,13 +1,13 @@
 body {
-    background-color: #283044;
+    background-color: #0D2818;
     font-family: 'Work Sans', sans-serif;
 }
 header {
     text-align: center; 
-    background-color: #E47F7B;
+    background-color: #216D33;
     padding: 2em;
-    color: #EBE9E9;
-    border: 1px solid #EBE9E9;
+    color: #E8E8E8;
+    border: 2px solid #E8E8E8;
 } 
 .title {
     font-size: 45px;
@@ -16,28 +16,28 @@ a {
     color: black;
     margin: 1em;
     text-decoration: none;
-    /* color: #EBE9E9; */
 }
 .nav {
-    color: #EBE9E9;
+
+    color: #CAD2C5;
 }
 h1 {
-    color: #EBE9E9;
+    color: #CAD2C5;
     text-align: center;
 }
 h2 {
     margin: -.5em 0;
-    color: #EBE9E9;
+    color: #CAD2C5;
 }
 h3 {
-    color: #EBE9E9;
+    color: #CAD2C5;
     margin: -.5em 0;
 }
 .name {
-    color: #283044;
+    color: #010C0C;
 }
 .horseIndex {
-    background-color: #EBE9E9;
+    background-color: #CAD2C5;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,15 +68,15 @@ img {
     border-radius: 10%;
 }
 button {
-    background-color: #E47F7B;
-    color: #EBE9E9;
+    background-color: #2C6E49;
+    color: #CAD2C5;
     font-size: 16px;
     padding: .5em;
     border-radius: 10%;
 }
 input[type="submit"] {
-    background-color: #E47F7B;
-    color: #EBE9E9;
+    background-color: #2C6E49;
+    color: #CAD2C5;
     font-size: 16px;
     padding: .5em;
     border-radius: 10%;
@@ -84,23 +84,23 @@ input[type="submit"] {
 .feedTitle {
     padding: 1em;
     text-align: center;
-    color: #EBE9E9;;
+    color: #CAD2C5;;
 }
 table {
     border-collapse: collapse;
     font-size: 20px;
     margin: 2em;
-    color: #283044;
-    background-color: #EBE9E9;
+    color: black;
+    background-color: #CAD2C5;
 }
 th {
-    border: 2px solid #283044;;
+    border: 2px solid black;;
     padding: 5px;
 }
 td {
-    border: 2px solid #283044;;
+    border: 2px solid ;;
     padding: 5px;
-    color: #283044;
+    color: ;
 }
 a :hover {
     cursor: pointer;
@@ -111,7 +111,7 @@ li {
     padding: -1em;
 }
 ul {
-    background-color: #EBE9E9;;
+    background-color: #CAD2C5;;
     padding: 1em;
 }
 input {
@@ -119,17 +119,17 @@ input {
     margin: .5em;
 }
 .editHorseForm {
-    background-color: #EBE9E9;
+    background-color: #CAD2C5;
     padding: 2em;
 }
 input {
-    border: 1px solid #283044;
+    border: 1px solid ;
 }
 input :hover {
-    border: 1px solid #E47F7B;
+    border: 1px solid #2C6E49;
 }
 .addHorseForm {
-    background-color: #EBE9E9;
+    background-color: #CAD2C5;
     padding: 2em;
 }
 
