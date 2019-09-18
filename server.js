@@ -48,9 +48,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 const horseController = require('./controllers/horse.js');
 app.use('/horses', horseController)
 //___________________
-app.get('/', (req, res) => {
-  res.redirect('/horses')
-});
+// app.get('/', (req, res) => {
+//   res.redirect('/horses')
+// });
 //___________________
 //Listener
 //___________________
