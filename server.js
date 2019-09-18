@@ -25,7 +25,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
 // Connect to Mongo
-// mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -48,9 +48,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 const horseController = require('./controllers/horse.js');
 app.use('/horses', horseController)
 //___________________
-// app.get('/', (req, res) => {
-//   res.redirect('/horses')
-// });
+app.get('/', (req, res) => {
+  res.redirect('/horses')
+});
 //___________________
 //Listener
 //___________________
